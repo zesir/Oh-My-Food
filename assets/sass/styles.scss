@@ -1,0 +1,25 @@
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$third-color: #99e2d0;
+
+$main-font: "Roboto", sans-serif;
+$title-font: "Shrikhand", serif;
+
+.navbar {
+  width: 100%;
+  height: 4rem;
+  background-color: white;
+  h1 {
+    font-family: $main-font;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background-color: red;
+    list-style: none;
+    li {
+      color: $primary-color;
+    }
+  }
+}
