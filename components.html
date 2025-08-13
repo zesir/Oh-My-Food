@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0b649a6e30.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>oh My Food</title>
+  </head>
+  <body>
+    <main class="mainContainer">
+      <nav class="navbar-home">
+        <div class="navbar-home__logo">
+          <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo Oh My Food" />
+        </div>
+      </nav>
+
+      <div class="card-location">
+        <div class="card-location__icon">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Paris, Belleville</p>
+        </div>
+      </div>
+
+      <button class="btn-primary">explorez les menus</button>
+
+      <span class="badge-new">Nouveau</span>
+      <i class="fa-solid fa-arrow-left"></i>
+
+      <label class="img-toggle">
+        <input type="checkbox" />
+        <i class="fa-regular fa-heart img-1"></i>
+        <i class="fa-solid fa-heart img-2"></i>
+      </label>
+
+      <article class="card-meal__container">
+        <div class="card-meal">
+          <div class="card-meal__desc">
+            <h3>plat du jour</h3>
+            <p>assaisoné avec passion</p>
+          </div>
+          <div class="card-meal__price">
+            <p><strong>76$</strong></p>
+          </div>
+        </div>
+        <div class="card-meal__btn">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+      </article>
+
+      <article class="card-resto__container">
+        <div class="card-resto">
+          <div class="card-resto__illu">
+            <img
+              src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="image d'un plat"
+              class="card-resto__illu__img"
+            />
+            <span class="badge-new">Nouveau</span>
+          </div>
+          <div class="card-resto__caption">
+            <div class="card-resto__caption__desc">
+              <h3>La palette du gout</h3>
+              <p>Brooklyn</p>
+            </div>
+            <div class="card-resto__caption__like">
+              <i class="fa-regular fa-heart img-1"></i>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

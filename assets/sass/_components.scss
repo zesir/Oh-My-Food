@@ -1,0 +1,235 @@
+/*-----bouton dégradé---------*/
+.btn-primary {
+  background: linear-gradient($secondary-color, $primary-color);
+  color: white;
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    background-image: linear-gradient(
+      lighten($secondary-color, 10%),
+      lighten($primary-color, 10%)
+    );
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+/*------------------------------*/
+/*--------badge nouveau---------*/
+.badge-new {
+  color: #008766;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: $third-color;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+/*-----------------------------*/
+/*-------bouton j'aime---------*/
+.img-toggle {
+  position: relative;
+  display: inline-block;
+
+  input {
+    display: none;
+  }
+
+  .img-2 {
+    display: none;
+  }
+
+  input:checked + .img-1 {
+    display: none;
+  }
+
+  input:checked + .img-1 + .img-2 {
+    display: block;
+  }
+}
+/*----------------------------*/
+/*--------cards plats---------*/
+
+.card-meal__container {
+  display: flex;
+  height: 4.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto;
+
+  .card-meal {
+    flex: 1;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px 0 0 20px;
+
+    .card-meal__desc {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5em;
+    }
+
+    .card-meal__price {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-left: 20px;
+    }
+  }
+
+  .card-meal__btn {
+    position: relative;
+    width: 60px;
+    height: 100%;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Le fond vert animé
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $third-color;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      z-index: 1;
+    }
+
+    // L’icône au-dessus du fond vert
+    .fa-solid {
+      position: relative;
+      z-index: 2;
+      color: white;
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+    }
+  }
+
+  // Hover : animation du fond + apparition de l’icône
+  &:hover .card-meal__btn {
+    &::before {
+      transform: translateX(0%);
+    }
+
+    .fa-solid {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+/*----------------------------*/
+/*--------cards restaurant---------*/
+
+.card-resto__container {
+  max-width: 100%;
+}
+
+.card-resto {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .card-resto__illu {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    .card-resto__illu__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .badge-new {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+
+  .card-resto__caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .card-resto__caption__desc {
+      h3 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0;
+        color: gray;
+        font-size: 1.7rem;
+        font-weight: 300;
+      }
+    }
+
+    .card-resto__caption__like {
+      .fa-heart {
+        font-size: 1.5rem;
+        color: #aaa;
+        cursor: pointer;
+
+        &:hover {
+          color: #ff79da;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------*/
+/*-----------header home-----------*/
+.navbar-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  &__logo {
+    padding: 1.5rem 1rem;
+    max-width: 170px;
+  }
+}
+.card-location {
+  width: 100%;
+  background-color: #eaeaea;
+  @include DropShadow;
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    i {
+      font-size: 1.4rem;
+    }
+    p {
+      padding-left: 1rem !important;
+      font-size: 1.6rem;
+      margin: 0;
+    }
+  }
+}
+
+/*----------------------------*/
+/*-----------header page-----------*/
