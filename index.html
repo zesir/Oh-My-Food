@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,8 +18,8 @@
   </head>
   <body>
     <div class="mainContainer">
-      <nav class="navbar-home">
-        <div class="navbar-home__logo">
+      <nav class="navbar">
+        <div class="navbar__logo">
           <img src="assets/images/logo/ohmyfood.png" alt="OH MY FOOD Logo" />
         </div>
       </nav>
@@ -29,9 +29,11 @@
           <p>Paris, Belleville</p>
         </div>
       </div>
-      <header class="hero-section">
-        <h1 class="hero-section__title">Réservez le menu qui vous convient</h1>
-        <p class="hero-section__punchline">
+      <header class="home-hero-section">
+        <h1 class="home-hero-section__title">
+          Réservez le menu qui vous convient
+        </h1>
+        <p class="home-hero-section__punchline">
           Découvrez des restaurants d’exception, sélectionnés par nos soins.
         </p>
         <button class="btn-primary">Explorez nos restaurants</button>
@@ -79,100 +81,162 @@
             </div>
           </div>
         </section>
-        <div class="restaurant section_container">
+        <section class="restaurant section_container">
           <h2 class="restaurant__title section_container__title">Restaurant</h2>
-          <a href="#"
-            ><article class="card-resto__container">
-              <div class="card-resto">
-                <div class="card-resto__illu">
-                  <img
-                    src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                    alt="image d'un plat"
-                    class="card-resto__illu__img"
-                  />
-                  <span class="badge-new">Nouveau</span>
-                </div>
-                <div class="card-resto__caption">
-                  <div class="card-resto__caption__desc">
-                    <h3>La palette du gout</h3>
-                    <p>Ménilmontant</p>
+          <div class="restaurant-container">
+            <a class="link-box" href="restaurants/la-Palette-Du-Gout.html">
+              <article class="card-resto__container">
+                <div class="card-resto">
+                  <div class="card-resto__illu">
+                    <img
+                      src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                      alt="image d'un plat"
+                      class="card-resto__illu__img"
+                    />
+                    <span class="badge-new">Nouveau</span>
                   </div>
-                  <div class="card-resto__caption__like">
-                    <i class="fa-regular fa-heart img-1"></i>
+                  <div class="card-resto__caption">
+                    <div class="card-resto__caption__desc">
+                      <h3>La palette du gout</h3>
+                      <p>Ménilmontant</p>
+                    </div>
+                    <div class="heart-container">
+                      <svg
+                        class="heart-1"
+                        width="24"
+                        height="24"
+                        viewBox="-2 -2 28 28"
+                      >
+                        <path
+                          d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 
+                          0 4.661 5.571 9.427 12 15.808 
+                          6.43-6.381 12-11.147 12-15.808 
+                          0-6.792-8.875-8.306-12-2.944z"
+                          fill="transparent"
+                          stroke="#333"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div></article
-          ></a>
+                </div></article
+            ></a>
 
-          <a href="#"
-            ><article class="card-resto__container">
-              <div class="card-resto">
-                <div class="card-resto__illu">
-                  <img
-                    src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                    alt="image d'un plat"
-                    class="card-resto__illu__img"
-                  />
-                  <span class="badge-new">Nouveau</span>
-                </div>
-                <div class="card-resto__caption">
-                  <div class="card-resto__caption__desc">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
+            <a class="link-box" href="#">
+              <article class="card-resto__container">
+                <div class="card-resto">
+                  <div class="card-resto__illu">
+                    <img
+                      src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                      alt="image d'un plat"
+                      class="card-resto__illu__img"
+                    />
+                    <span class="badge-new">Nouveau</span>
                   </div>
-                  <div class="card-resto__caption__like">
-                    <i class="fa-regular fa-heart img-1"></i>
+                  <div class="card-resto__caption">
+                    <div class="card-resto__caption__desc">
+                      <h3>La note enchantée</h3>
+                      <p>Charonne</p>
+                    </div>
+                    <div class="heart-container">
+                      <svg
+                        class="heart-1"
+                        width="24"
+                        height="24"
+                        viewBox="-2 -2 28 28"
+                      >
+                        <path
+                          d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 
+                          0 4.661 5.571 9.427 12 15.808 
+                          6.43-6.381 12-11.147 12-15.808 
+                          0-6.792-8.875-8.306-12-2.944z"
+                          fill="transparent"
+                          stroke="#333"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div></article
-          ></a>
+                </div></article
+            ></a>
 
-          <a href="#"
-            ><article class="card-resto__container">
-              <div class="card-resto">
-                <div class="card-resto__illu">
-                  <img
-                    src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                    alt="image d'un plat"
-                    class="card-resto__illu__img"
-                  />
-                  <span class="badge-new">Nouveau</span>
-                </div>
-                <div class="card-resto__caption">
-                  <div class="card-resto__caption__desc">
-                    <h3>A la française</h3>
-                    <p>Cité Rouge</p>
+            <a class="link-box" href="#">
+              <article class="card-resto__container">
+                <div class="card-resto">
+                  <div class="card-resto__illu">
+                    <img
+                      src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                      alt="image d'un plat"
+                      class="card-resto__illu__img"
+                    />
+                    <span class="badge-new">Nouveau</span>
                   </div>
-                  <div class="card-resto__caption__like">
-                    <i class="fa-regular fa-heart img-1"></i>
+                  <div class="card-resto__caption">
+                    <div class="card-resto__caption__desc">
+                      <h3>A la française</h3>
+                      <p>Cité Rouge</p>
+                    </div>
+                    <div class="heart-container">
+                      <svg
+                        class="heart-1"
+                        width="24"
+                        height="24"
+                        viewBox="-2 -2 28 28"
+                      >
+                        <path
+                          d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 
+                          0 4.661 5.571 9.427 12 15.808 
+                          6.43-6.381 12-11.147 12-15.808 
+                          0-6.792-8.875-8.306-12-2.944z"
+                          fill="transparent"
+                          stroke="#333"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div></article
-          ></a>
+                </div></article
+            ></a>
 
-          <a href="#"
-            ><article class="card-resto__container">
-              <div class="card-resto">
-                <div class="card-resto__illu">
-                  <img
-                    src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                    alt="image d'un plat"
-                    class="card-resto__illu__img"
-                  />
-                  <span class="badge-new">Nouveau</span>
-                </div>
-                <div class="card-resto__caption">
-                  <div class="card-resto__caption__desc">
-                    <h3>Le délice des chances</h3>
-                    <p>Folie-Méricourt</p>
+            <a class="link-box" href="#">
+              <article class="card-resto__container">
+                <div class="card-resto">
+                  <div class="card-resto__illu">
+                    <img
+                      src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                      alt="image d'un plat"
+                      class="card-resto__illu__img"
+                    />
+                    <span class="badge-new">Nouveau</span>
                   </div>
-                  <div class="card-resto__caption__like">
-                    <i class="fa-regular fa-heart img-1"></i>
+                  <div class="card-resto__caption">
+                    <div class="card-resto__caption__desc">
+                      <h3>Le délice des chances</h3>
+                      <p>Folie-Méricourt</p>
+                    </div>
+                    <div class="heart-container">
+                      <svg
+                        class="heart-1"
+                        width="24"
+                        height="24"
+                        viewBox="-2 -2 28 28"
+                      >
+                        <path
+                          d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 
+                          0 4.661 5.571 9.427 12 15.808 
+                          6.43-6.381 12-11.147 12-15.808 
+                          0-6.792-8.875-8.306-12-2.944z"
+                          fill="transparent"
+                          stroke="#333"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div></article
-          ></a>
-        </div>
+                </div></article
+            ></a>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer__container">

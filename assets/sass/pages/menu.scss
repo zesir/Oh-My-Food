@@ -1,0 +1,119 @@
+/*-----------header page-----------*/
+.resto-hero-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+/*-----------header page-----------*/
+.resto-main-content {
+  z-index: 1000;
+
+  margin-top: -2rem !important;
+  border-radius: 2rem 2rem 0 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: $bg-color;
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+    margin: auto;
+    @include max-width;
+  }
+}
+.menu-resto {
+  width: 100%;
+  height: auto;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  @media screen and (min-width: 1024px) {
+    justify-content: center;
+    gap: 3rem;
+  }
+  &__title {
+    font-family: $title-font;
+    font-size: 2.4rem;
+  }
+}
+.menu-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+    max-width: 650px;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: $third-color;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+.heart-container {
+  margin-right: 1rem;
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  // Gradient derrière le SVG
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    @include main-gradient;
+    clip-path: path(
+      "M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+    );
+    opacity: 0; // invisible au départ
+    transition: opacity 0.5s ease;
+    transform-origin: bottom;
+  }
+
+  svg.heart-1 {
+    position: relative;
+    z-index: 1; // devant le gradient
+    path {
+      stroke: #333;
+      stroke-width: 1;
+      fill: transparent;
+      transition: stroke 0.5s ease;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1; // montre le gradient au hover
+    }
+
+    svg.heart-1 path {
+      stroke: transparent; // contour disparaît
+    }
+  }
+}
+
+.commander {
+  margin-top: 3rem;
+}
