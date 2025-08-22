@@ -560,6 +560,7 @@ button {
   height: auto;
   position: relative;
   z-index: -1;
+  aspect-ratio: 16/9;
   max-height: 50rem;
   overflow: hidden;
 }
