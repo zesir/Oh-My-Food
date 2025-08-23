@@ -1,72 +1,95 @@
 /*--------cards plats---------*/
-
-.card-meal__container {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-  border-radius: $radius-lg; // 2rem
+.card-anim {
   width: 100%;
-  margin: $spacing-sm auto; // 1rem auto
 
-  .card-meal {
-    display: flex;
-    align-items: stretch; // bouton prend toute la hauteur
-    background-color: $color-light;
+  .card-meal__container {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: $radius-lg; // 2rem
-    overflow: hidden; // cache le bouton quand il est fermé
+    width: 100%;
+    margin: $spacing-sm auto; // 1rem auto
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
 
-    .card-meal__desc {
-      flex: 1;
-      padding: $spacing-sm; // 1rem
+    .card-meal {
       display: flex;
-      flex-direction: column;
-      justify-content: center; // centrer le texte verticalement
-      h3 {
-        margin-bottom: 0.5rem;
-        font-size: 1.8rem;
-        font-weight: $font-weight-medium;
-      }
-      p {
-        margin: 0;
-        font-size: 1.5rem;
-        font-weight: $font-weight-regular;
-      }
-    }
+      align-items: stretch; // bouton prend toute la hauteur
+      background-color: $color-light;
+      border-radius: $radius-lg; // 2rem
+      overflow: hidden; // cache le bouton quand il est fermé
 
-    .card-meal__price {
-      display: flex;
-      align-items: flex-end; // alignement en bas
-      padding: 0 $spacing-sm $spacing-sm $spacing-sm; // 0 1rem 1rem 1rem
-      align-self: flex-end;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-      p {
-        margin: 0;
+      .card-meal__desc {
+        flex: 1;
+        padding: $spacing-sm; // 1rem
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // centrer le texte verticalement
+        h3 {
+          margin-bottom: 0.5rem;
+          font-size: 1.8rem;
+          font-weight: $font-weight-medium;
+        }
+        p {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: $font-weight-regular;
+        }
       }
-    }
 
-    .card-meal__btn {
-      background-color: $color-success;
-      width: 0; // caché par défaut
-      align-self: stretch;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      transition: width 0.3s ease;
-      color: $color-light;
-      font-size: $font-size-base;
-    }
-
-    &:hover {
-      .card-meal__btn {
-        width: 60px; // largeur quand affiché
-      }
       .card-meal__price {
-        transform: translateX(-5px); // pousse le prix vers la gauche
+        display: flex;
+        align-items: flex-end; // alignement en bas
+        padding: 0 $spacing-sm $spacing-sm $spacing-sm; // 0 1rem 1rem 1rem
+        align-self: flex-end;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        p {
+          margin: 0;
+        }
+      }
+
+      .card-meal__btn {
+        background-color: $color-success;
+        width: 0; // caché par défaut
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: width 0.3s ease;
+        color: $color-light;
+        font-size: $font-size-base;
+      }
+
+      &:hover {
+        .card-meal__btn {
+          width: 60px; // largeur quand affiché
+        }
+        .card-meal__price {
+          transform: translateX(-5px); // pousse le prix vers la gauche
+        }
       }
     }
   }
-}
 
+  @for $i from 1 through 10 {
+    .card-meal__container:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.3}s;
+    }
+  }
+
+  // Animation
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
 /*----------------------------*/
 /*--------cards restaurant---------*/
 
