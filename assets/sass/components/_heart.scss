@@ -1,5 +1,5 @@
 .heart-container {
-  margin-right: 1rem;
+  margin-right: $spacing-sm; // 1rem
   position: relative;
   width: 2.4rem;
   height: 2.4rem;
@@ -24,7 +24,7 @@
     position: relative;
     z-index: 1; // devant le gradient
     path {
-      stroke: #333;
+      stroke: #101010;
       stroke-width: 1;
       fill: transparent;
       transition: stroke 0.5s ease;

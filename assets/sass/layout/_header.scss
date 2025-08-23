@@ -4,25 +4,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem 2rem;
-  background-color: $bg-color;
+  padding: $spacing-lg $spacing-md; // 3rem 2rem
+  background-color: $color-bg;
   &__title {
     font-family: $main-font;
-    margin-top: 1rem;
+    margin-top: $spacing-sm; // 1rem
     padding: 0 40px;
     text-align: center;
-    font-size: 2.4rem; /* 24px */
-    font-weight: 700;
+    font-size: $font-size-lg; /* 24px */
+    font-weight: $font-weight-bold;
   }
   &__punchline {
-    font-size: 1.6rem; /* 16px */
+    font-size: $font-size-base; /* 16px */
     text-align: center;
-    color: #353535;
-    font-weight: 300;
+    color: $color-dark;
+    font-weight: $font-weight-regular;
     margin-bottom: 20px;
   }
   .btn-primary {
-    margin-bottom: 3rem;
+    margin-bottom: $spacing-lg; // 3rem
   }
 }
 /*fin header*/

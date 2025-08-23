@@ -1,6 +1,10 @@
 @charset "UTF-8";
-/*.........gere les couleurs du site.............*/
-/*.........gere les typos du site.............*/
+/*.........Couleurs.............*/
+/*.........Typo.............*/
+/*.........Spacing.............*/
+/*.........radius..............*/
+/* ---------------- SHADOWS ---------------- */
+/* ---------------- BREAKPOINTS ---------------- */
 /*responsive*/
 /* Reset de base */
 * {
@@ -104,7 +108,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2rem;
   background-color: #f6f6f6;
 }
 .home-hero-section__title {
@@ -214,7 +218,7 @@ button {
   z-index: 1000;
 }
 .navbar__logo {
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   max-width: 170px;
 }
 .navbar__return {
@@ -223,7 +227,7 @@ button {
   top: 1.5rem;
   display: flex;
   align-items: center;
-  color: #333;
+  color: #353535;
   font-size: 1.6rem;
   text-decoration: none;
 }
@@ -264,15 +268,15 @@ button {
 /*--------cards plats---------*/
 .card-meal__container {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
+  border-radius: 2rem;
   width: 100%;
   margin: 1rem auto;
 }
 .card-meal__container .card-meal {
   display: flex;
   align-items: stretch;
-  background-color: white;
-  border-radius: 20px;
+  background-color: #ffffff;
+  border-radius: 2rem;
   overflow: hidden;
 }
 .card-meal__container .card-meal .card-meal__desc {
@@ -312,7 +316,7 @@ button {
   justify-content: center;
   overflow: hidden;
   transition: width 0.3s ease;
-  color: white;
+  color: #ffffff;
   font-size: 1.6rem;
 }
 .card-meal__container .card-meal:hover .card-meal__btn {
@@ -329,9 +333,9 @@ button {
 }
 
 .card-resto {
-  border-radius: 20px;
+  border-radius: 2rem;
   overflow: hidden;
-  background-color: white;
+  background-color: #ffffff;
 }
 .card-resto .card-resto__illu {
   position: relative;
@@ -422,7 +426,7 @@ button {
   z-index: 1;
 }
 .heart-container svg.heart-1 path {
-  stroke: #333;
+  stroke: #101010;
   stroke-width: 1;
   fill: transparent;
   transition: stroke 0.5s ease;
@@ -503,7 +507,7 @@ button {
   justify-content: center;
   background-color: #f6f6f6;
   width: 90%;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2rem;
   border-radius: 2rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   gap: 1rem;
@@ -513,7 +517,7 @@ button {
   width: 2.4rem;
   height: 2.4rem;
   left: -1.2rem;
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* 14px */
   background-color: #9356dc;
   color: #ffffff;
   font-weight: 700;

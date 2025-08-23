@@ -1,11 +1,11 @@
 @mixin main-gradient {
-  background: linear-gradient($secondary-color, $primary-color);
+  background: linear-gradient($color-accent, $color-primary);
 }
 @mixin DropShadow {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow-light;
 }
 @mixin cardRadius {
-  border-radius: 2rem;
+  border-radius: $radius-lg; // 2rem
 }
 /*responsive*/
 @mixin max-width {

@@ -1,9 +1,48 @@
-/*.........gere les couleurs du site.............*/
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$third-color: #99e2d0;
-$bg-color: #f6f6f6;
+/*.........Couleurs.............*/
 
-/*.........gere les typos du site.............*/
+$color-primary: #9356dc;
+$color-accent: #ff79da;
+$color-success: #99e2d0;
+$icon-color: #7e7e7e;
+
+$color-bg: #f6f6f6;
+$color-light: #ffffff;
+$color-dark: #353535;
+
+/*.........Typo.............*/
 $main-font: "Roboto", sans-serif;
 $title-font: "Shrikhand", serif;
+
+$font-size-base: 1.6rem;
+$font-size-sm: 1.4rem;
+$font-size-lg: 2.4rem;
+$font-size-xl: 2.8rem;
+
+$font-weight-regular: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+/*.........Spacing.............*/
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 3rem;
+
+/*.........radius..............*/
+
+$radius-sm: 0.5rem;
+$radius-md: 1rem;
+$radius-lg: 2rem;
+$radius-pill: 5rem;
+
+/* ---------------- SHADOWS ---------------- */
+$shadow-light: 0 4px 4px rgba(0, 0, 0, 0.1);
+$shadow-strong: 2px 2px 15px rgba(0, 0, 0, 0.3);
+
+/* ---------------- BREAKPOINTS ---------------- */
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1440px,
+);
