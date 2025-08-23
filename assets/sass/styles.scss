@@ -1,5 +1,19 @@
-@import "variables";
-@import "base";
-@import "components";
+// 1. Utils (variables, mixins, functions)
+@import "utils/variables";
+@import "utils/placeholders";
+@import "utils/mixins";
+@import "utils/functions";
+// 2. Base (reset, typography, global styles)
+@import "base/base";
+
+// 3. Layout (header, footer, layout structure)
+@import "layout/header";
+@import "layout/footer";
+@import "layout/nav";
+
+// 4. Components (buttons, cards, modals, etc.)
+@import "components/buttons";
+@import "components/cards";
+@import "components/heart"; // 5. Pages (specific styles for different pages)
 @import "pages/home";
 @import "pages/menu";

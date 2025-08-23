@@ -1,0 +1,46 @@
+/*header accueil*/
+.home-hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background-color: $bg-color;
+  &__title {
+    font-family: $main-font;
+    margin-top: 1rem;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 2.4rem; /* 24px */
+    font-weight: 700;
+  }
+  &__punchline {
+    font-size: 1.6rem; /* 16px */
+    text-align: center;
+    color: #353535;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    margin-bottom: 3rem;
+  }
+}
+/*fin header*/
+
+/*-----------header page-----------*/
+.resto-hero-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+  aspect-ratio: 16/9;
+  max-height: 50rem;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+/*-----------header page-----------*/

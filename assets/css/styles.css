@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*.........gere les couleurs du sit.............*/
+/*.........gere les couleurs du site.............*/
 /*.........gere les typos du site.............*/
 /*responsive*/
 /* Reset de base */
@@ -98,6 +98,140 @@ button {
   background-color: #f6f6f6;
 }
 
+/*header accueil*/
+.home-hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background-color: #f6f6f6;
+}
+.home-hero-section__title {
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 2.4rem; /* 24px */
+  font-weight: 700;
+}
+.home-hero-section__punchline {
+  font-size: 1.6rem; /* 16px */
+  text-align: center;
+  color: #353535;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.home-hero-section .btn-primary {
+  margin-bottom: 3rem;
+}
+
+/*fin header*/
+/*-----------header page-----------*/
+.resto-hero-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+  aspect-ratio: 16/9;
+  max-height: 50rem;
+  overflow: hidden;
+}
+.resto-hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*-----------header page-----------*/
+/*footer*/
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #353535;
+  color: #ffffff;
+  padding: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    padding: 4rem;
+  }
+}
+.footer__logo {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
+.footer__logo h3 {
+  font-family: "Shrikhand", serif !important;
+  font-size: 1.8rem;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__links {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+.footer__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/*fin footer*/
+/*-----------header home-----------*/
+.navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.navbar__logo {
+  padding: 1.5rem 1rem;
+  max-width: 170px;
+}
+.navbar__return {
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.navbar__return i {
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+}
+
 /*-----bouton dégradé---------*/
 .btn-primary {
   background: linear-gradient(#ff79da, #9356dc);
@@ -127,25 +261,6 @@ button {
 }
 
 /*-----------------------------*/
-/*-------bouton j'aime---------*/
-.img-toggle {
-  position: relative;
-  display: inline-block;
-}
-.img-toggle input {
-  display: none;
-}
-.img-toggle .img-2 {
-  display: none;
-}
-.img-toggle input:checked + .img-1 {
-  display: none;
-}
-.img-toggle input:checked + .img-1 + .img-2 {
-  display: block;
-}
-
-/*----------------------------*/
 /*--------cards plats---------*/
 .card-meal__container {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
@@ -262,35 +377,6 @@ button {
 }
 
 /*----------------------------*/
-/*-----------header home-----------*/
-.navbar {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #f6f6f6;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-.navbar__logo {
-  padding: 1.5rem 1rem;
-  max-width: 170px;
-}
-.navbar__return {
-  position: absolute;
-  left: 1rem;
-  top: 1.5rem;
-  display: flex;
-  align-items: center;
-  color: #333;
-  font-size: 1.6rem;
-  text-decoration: none;
-}
-.navbar__return i {
-  margin-right: 0.5rem;
-  font-size: 1.6rem;
-}
-
 .card-location {
   width: 100%;
   background-color: #eaeaea;
@@ -313,94 +399,41 @@ button {
 }
 
 /*----------------------------*/
-/*footer*/
-.footer__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #353535;
-  color: #ffffff;
-  padding: 2rem;
-}
-@media screen and (min-width: 1024px) {
-  .footer__container {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
-    padding: 4rem;
-  }
-}
-.footer__logo {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 1024px) {
-  .footer__logo {
-    margin: 0;
-  }
-}
-.footer__logo h3 {
-  font-family: "Shrikhand", serif !important;
-  font-size: 1.8rem;
-}
-.footer__links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-@media screen and (min-width: 1024px) {
-  .footer__links {
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 2rem;
-  }
-}
-.footer__icon {
-  width: 1.2rem;
+.heart-container {
   margin-right: 1rem;
-  font-size: 1.2rem;
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
-.footer__link {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 500;
+.heart-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#ff79da, #9356dc);
+  clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transform-origin: bottom;
 }
-
-/*fin footer*/
-/*heart*/
-/*header*/
-.home-hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem 2rem;
-  background-color: #f6f6f6;
+.heart-container svg.heart-1 {
+  position: relative;
+  z-index: 1;
 }
-.home-hero-section__title {
-  font-family: "Roboto", sans-serif;
-  margin-top: 1rem;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 2.4rem; /* 24px */
-  font-weight: 700;
+.heart-container svg.heart-1 path {
+  stroke: #333;
+  stroke-width: 1;
+  fill: transparent;
+  transition: stroke 0.5s ease;
 }
-.home-hero-section__punchline {
-  font-size: 1.6rem; /* 16px */
-  text-align: center;
-  color: #353535;
-  font-weight: 300;
-  margin-bottom: 20px;
+.heart-container:hover::before {
+  opacity: 1;
 }
-.home-hero-section .btn-primary {
-  margin-bottom: 3rem;
+.heart-container:hover svg.heart-1 path {
+  stroke: transparent;
 }
 
-/*fin header*/
 /*----------------------------main content-----------------------*/
 .section_container {
   padding: 2rem;
@@ -554,24 +587,6 @@ button {
 }
 /*fin Restaurants*/
 /*---------------------------fin main content--------------------*/
-/*-----------header page-----------*/
-.resto-hero-section {
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: -1;
-  aspect-ratio: 16/9;
-  max-height: 50rem;
-  overflow: hidden;
-}
-.resto-hero-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/*-----------header page-----------*/
 .resto-main-content {
   z-index: 1000;
   margin-top: -2rem !important;
@@ -643,41 +658,6 @@ button {
   height: 2px;
   background-color: #99e2d0;
   margin-top: 0.3rem;
-}
-
-.heart-container {
-  margin-right: 1rem;
-  position: relative;
-  width: 2.4rem;
-  height: 2.4rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.heart-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(#ff79da, #9356dc);
-  clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  transform-origin: bottom;
-}
-.heart-container svg.heart-1 {
-  position: relative;
-  z-index: 1;
-}
-.heart-container svg.heart-1 path {
-  stroke: #333;
-  stroke-width: 1;
-  fill: transparent;
-  transition: stroke 0.5s ease;
-}
-.heart-container:hover::before {
-  opacity: 1;
-}
-.heart-container:hover svg.heart-1 path {
-  stroke: transparent;
 }
 
 .commander {

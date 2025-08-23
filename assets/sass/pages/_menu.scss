@@ -1,0 +1,65 @@
+.resto-main-content {
+  z-index: 1000;
+
+  margin-top: -2rem !important;
+  border-radius: 2rem 2rem 0 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: $bg-color;
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+    margin: auto;
+    @include max-width;
+  }
+}
+.menu-resto {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  @media screen and (min-width: 1024px) {
+    justify-content: center;
+    gap: 3rem;
+  }
+  &__title {
+    font-family: $title-font;
+    font-size: 2.4rem;
+  }
+}
+.menu-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+    max-width: 650px;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: $third-color;
+      margin-top: 0.3rem;
+    }
+  }
+}
+.commander {
+  margin-top: 3rem;
+}

@@ -1,0 +1,31 @@
+/*-----bouton dégradé---------*/
+.btn-primary {
+  background: linear-gradient($secondary-color, $primary-color);
+  color: white;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  font-size: 1.6rem;
+
+  &:hover {
+    background-image: linear-gradient(
+      lighten($secondary-color, 10%),
+      lighten($primary-color, 10%)
+    );
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+/*------------------------------*/
+/*--------badge nouveau---------*/
+.badge-new {
+  color: #008766;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: $third-color;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+/*-----------------------------*/
