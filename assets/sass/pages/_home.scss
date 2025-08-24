@@ -1,75 +1,47 @@
-/*header*/
-.home-hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem 2rem;
-  background-color: $bg-color;
-  &__title {
-    font-family: $main-font;
-    margin-top: 1rem;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 2.4rem; /* 24px */
-    font-weight: 700;
-  }
-  &__punchline {
-    font-size: 1.6rem; /* 16px */
-    text-align: center;
-    color: #353535;
-    font-weight: 300;
-    margin-bottom: 20px;
-  }
-  .btn-primary {
-    margin-bottom: 3rem;
-  }
-}
-/*fin header*/
 /*----------------------------main content-----------------------*/
 .section_container {
-  padding: 2rem;
+  padding: $spacing-md; // 2rem
   display: flex;
   flex-direction: column;
   &__title {
-    margin: 3rem 0 2rem 0;
-    @media screen and (min-width: 1440px) {
+    margin: $spacing-lg 0 $spacing-md 0; // 3rem 0 2rem 0
+    @media screen and (min-width: map-get($breakpoints, "xl")) {
       width: 80%;
-      margin: 2rem auto;
+      margin: $spacing-md auto; // 2rem auto
       @include max-width;
     }
   }
 }
 /*Fonctionnement*/
 .fonctionnement {
-  padding: 2rem;
-  background-color: #ffffff;
+  padding: $spacing-md; // 2rem
+  background-color: $color-light;
   display: flex;
   flex-direction: column;
 
   &__title {
-    font-size: 2.4rem; /* 24px */
-    font-weight: 700;
+    font-size: $font-size-lg; /* 24px */
+    font-weight: $font-weight-bold;
   }
   &__steps {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: $spacing-md; // 2rem
+    margin-top: $spacing-md; // 2rem
 
     &:last-child {
       margin-bottom: 5rem;
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: map-get($breakpoints, "lg")) {
       flex-direction: row;
       justify-content: space-between;
-      gap: 3rem;
+      gap: $spacing-lg; // 3rem
       width: 100%;
-      margin: 2rem auto;
+      margin: $spacing-md auto; // 2rem auto
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: map-get($breakpoints, "xl")) {
       width: 80%;
       @include max-width;
     }
@@ -79,22 +51,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $bg-color;
+      background-color: $color-bg;
       width: 90%;
-      padding: 2.5rem 2rem;
+      padding: $spacing-lg $spacing-md; // 3rem 2rem
       @include cardRadius;
       @include DropShadow;
-      gap: 1rem;
+      gap: $spacing-sm; // 1rem
 
       &__number {
         position: absolute;
         width: 2.4rem;
         height: 2.4rem;
         left: -1.2rem;
-        font-size: 1.4rem;
-        background-color: $primary-color;
-        color: #ffffff;
-        font-weight: 700;
+        font-size: $font-size-sm; /* 14px */
+        background-color: $color-primary;
+        color: $color-light;
+        font-weight: $font-weight-bold;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -110,16 +82,16 @@
         position: absolute;
         left: 3.5rem;
         font-size: 2rem; /* 20px */
-        color: #7e7e7e;
+        color: $icon-color;
         &--purple {
           position: absolute;
           left: 3.5rem;
           font-size: 2rem; /* 20px */
-          color: $primary-color;
+          color: $color-primary;
         }
       }
       &__title {
-        font-size: 1.6rem; /* 16px */
+        font-size: $font-size-base; /* 16px */
         color: #000000;
       }
     }
@@ -131,14 +103,14 @@
 .restaurant-container {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: map-get($breakpoints, "xl")) {
     width: 80%;
-    margin: 2rem auto;
+    margin: $spacing-md auto; // 2rem auto
     @include max-width;
   }
 }
@@ -147,22 +119,16 @@
   color: inherit;
   width: 100%;
   height: auto;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
     width: 48%;
   }
 }
 .card-resto__container {
   max-width: 100%;
-  margin: 2rem 0;
-  @media screen and (min-width: 1024px) {
+  margin: $spacing-md 0; // 2rem 0
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
   }
 }
 /*fin Restaurants*/
 
 /*---------------------------fin main content--------------------*/
-@media screen and (min-width: 576px) {
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 1024px) {
-}

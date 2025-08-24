@@ -1,0 +1,15 @@
+@mixin main-gradient {
+  background: linear-gradient($color-accent, $color-primary);
+}
+@mixin DropShadow {
+  box-shadow: $shadow-light;
+}
+@mixin cardRadius {
+  border-radius: $radius-lg; // 2rem
+}
+/*responsive*/
+@mixin max-width {
+  @media screen and (min-width: 1024px) {
+    max-width: 1200px;
+  }
+}
