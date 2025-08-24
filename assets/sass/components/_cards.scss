@@ -18,8 +18,9 @@
       border-radius: $radius-lg; // 2rem
       overflow: hidden; // cache le bouton quand il est fermé
 
-      .card-meal__desc {
-        flex: 1;
+      &__desc {
+        flex: 1 1 auto; //
+        min-width: 0;
         padding: $spacing-sm; // 1rem
         display: flex;
         flex-direction: column;
@@ -28,15 +29,21 @@
           margin-bottom: 0.5rem;
           font-size: 1.8rem;
           font-weight: $font-weight-medium;
+          white-space: nowrap; // empêche le retour à la ligne
+          overflow: hidden;
+          text-overflow: ellipsis; // ajoute "..." si le texte est trop long
         }
         p {
           margin: 0;
           font-size: 1.5rem;
           font-weight: $font-weight-regular;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
 
-      .card-meal__price {
+      &__price {
         display: flex;
         align-items: flex-end; // alignement en bas
         padding: 0 $spacing-sm $spacing-sm $spacing-sm; // 0 1rem 1rem 1rem
@@ -48,7 +55,7 @@
         }
       }
 
-      .card-meal__btn {
+      &__btn {
         background-color: $color-success;
         width: 0; // caché par défaut
         align-self: stretch;
@@ -72,7 +79,7 @@
     }
   }
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 4 {
     .card-meal__container:nth-child(#{$i}) {
       animation-delay: #{$i * 0.3}s;
     }
@@ -102,13 +109,13 @@
   overflow: hidden;
   background-color: $color-light;
 
-  .card-resto__illu {
+  &__illu {
     position: relative;
     width: 100%;
     height: 200px;
     overflow: hidden;
 
-    .card-resto__illu__img {
+    &__img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -122,13 +129,13 @@
     }
   }
 
-  .card-resto__caption {
+  &__caption {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: $spacing-sm; // 1rem
 
-    .card-resto__caption__desc {
+    &__desc {
       h3 {
         margin: 0;
         font-size: 1.8rem;
@@ -143,7 +150,7 @@
       }
     }
 
-    .card-resto__caption__like {
+    &__like {
       .fa-heart {
         font-size: 1.5rem;
         color: #aaa;

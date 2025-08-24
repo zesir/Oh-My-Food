@@ -7,7 +7,7 @@
   border-radius: $radius-pill; // 5rem
   cursor: pointer;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease-in-out;
   font-size: $font-size-base;
 
   &:hover {
